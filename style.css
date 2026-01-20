@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;      /* 🔑 vertical center */
+  justify-content: center;  /* horizontal center */
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Alegreya Sans", sans-serif;
+  color: #eaeaea;
+  cursor: crosshair;
+  
+  background-color: #111;
+}
+
+.page {
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    /* Solid dark UI zone (0% → 60%), then fade */
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.75) 50%,   /* 🔒 stays solid */
+      rgba(0, 0, 0, 0.45) 75%,   /* start fading */
+      rgba(0, 0, 0, 0.15) 90%,
+      rgba(0, 0, 0, 0.0) 100%
+    ),
+
+    /* Subtle cinematic curvature */
+    radial-gradient(
+      ellipse at left center,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.15) 45%,
+      rgba(0, 0, 0, 0.0) 75%
+    );
+
+  z-index: 0;
+}
+
+
+/* Make sure content is above the overlay */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("assets/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  filter: blur(0px);
+  transform: scale(1.00); /* prevents edge clipping */
+
+  z-index: -1;
+}
+
+h1 {
+  margin-bottom: 12px;
+  color: #c79749;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: block;
+  grid-template-columns: repeat(1fr, minmax(220px, 1fr));
+  gap: 12px;
+  width: 550px;
+}
+
+section {
+  padding: 12px;
+}
+
+section h2 {
+  background-color: #ffffff11;
+  font-weight: 400;
+  color: #cccccc;
+  padding: 8px 16px;
+  font-size: 24px;
+}
+
+.total {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #cccccc;
+  padding: 0px 16px;
+}
+
+input {
+  width: 80px;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background: url(https://www.wherewindsmeetgame.com/pc/gw/20240219100833/img/btn-bg3_e3151e2.png) no-repeat center top;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border: 0;
+  font-size: 15px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+pre {
+  margin-top: 16px;
+  padding: 12px;
+  display: flex;
+  width: 300px;
+  display: none;
+}
+
+span {
+  text-align: left;
+  width: 80px;
+  color: #efbc93;
+}
+
+.line {
+  background-color: #ffffff11;
+  height: 2px;
+}
+
+.dmgHitTitle {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 20px;
+}
+
+#dmgHitEl {
+  color: #fff;
+  font-size: 40px;
+  margin-top: -10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.totalContent {
+  display: flex;
+}
+
+#masteryIcon {
+  height: 60px;
+}
+
+.rateChartBox {
+  margin-left: auto;
+}
+
+.rateChartBox {
+  position: relative;
+}
+
+.chart-tooltip {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00000042;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+}
+
+.chart-tooltip div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.swatch.gray   { background: #a5a5a5; }
+.swatch.white  { background: #ffffff; }
+.swatch.yellow { background: #f5c542; }
+.swatch.orange { background: #e48a2a; }

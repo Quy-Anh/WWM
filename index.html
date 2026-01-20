@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where Winds Meet – Damage Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+    <div class="content">
+        <div class="grid">
+            <section class="total">
+                <div class="totalContent">
+                    <div>
+                        <img id="masteryIcon" src="assets/icon.png">
+                    </div>
+                    <div class="dmgHitBox">
+                        <label class="dmgHitTitle">Damage Per Hit</label>
+                        <label id="dmgHitEl"></label>
+                    </div>
+                    <div class="rateChartBox">
+                        <canvas id="rateChart" width="60" height="60"></canvas>
+
+                        <div id="chartTooltip" class="chart-tooltip">
+                            <div><span class="swatch gray"></span> Abrasion</div>
+                            <div><span class="swatch white"></span> Precision</div>
+                            <div><span class="swatch yellow"></span> Critical Rate</div>
+                            <div><span class="swatch orange"></span> Affinity Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="line"></div>
+            </section>
+
+            <section>
+                <h2>Basic Attributes</h2>
+                <label>Min. Physical Attack <input id="minAtk" type="number" value="61"></label>
+                <label>Max. Physical Attack <input id="maxAtk" type="number" value="121"></label>
+            </section>
+
+            <section>
+                <h2>Attribute to Check</h2>
+                <label>Precision Rate <input id="precision" type="number" value="65.1"></label>
+                <label>Critical Rate <input id="crit" type="number" value="0.2"></label>
+                <label>Affinity Rate <input id="affinity" type="number" value="0.1"></label>
+                <label>Direct Critical Rate <input id="directCrit" type="number" value="0"></label>
+                <label>Direct Affinity Rate <input id="directAffinity" type="number" value="0"></label>
+                <label>Abrasion Conversion Rate <input id="abrasionConv" type="number" value="0"></label>
+            </section>
+
+            <section>
+                <h2>Damage Increase Effect</h2>
+                <label>Crit DMG Bonus <input id="critBonus" type="number" value="35"></label>
+                <label>Affinity DMG Bonus <input id="affinityBonus" type="number" value="20"></label>
+            </section>
+
+            <pre id="output"></pre>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
