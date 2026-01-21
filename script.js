@@ -124,3 +124,19 @@ const outputEl = document.getElementById("output");
 
 // Initial render
 calculate();
+
+const mobileQuery = window.matchMedia("(max-width: 768px)");
+
+function handleMobileChange(e) {
+  if (e.matches) {
+    document.querySelector(".content").innerHTML = "Use desktop instead.";
+  } else {
+
+  }
+}
+
+// Run once on load
+handleMobileChange(mobileQuery);
+
+// Listen for changes (rotate, resize, iOS toolbar changes)
+mobileQuery.addEventListener("change", handleMobileChange);
