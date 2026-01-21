@@ -250,7 +250,8 @@ span {
   }
 
   body {
-    align-items: baseline !important;
+    align-items: baseline;
+    display: block;
   }
 
   body::before,
