@@ -129,7 +129,7 @@ const mobileQuery = window.matchMedia("(max-width: 768px)");
 
 function handleMobileChange(e) {
   if (e.matches) {
-    document.querySelector(".content").innerHTML = "Use desktop instead.";
+    document.querySelector(".content").innerHTML = "<p style='text-align: center'>Mobile function not yet implemented.<br>Use desktop instead.</p>";
   } else {
 
   }
