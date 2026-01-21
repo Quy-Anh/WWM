@@ -136,6 +136,7 @@ function handleMobileChange(e) {
     }, 50);
 
     setTimeout(() => {
+      document.body.style.setProperty("--blur-amount", "0px");
       document.querySelector(".grid").style.opacity = "100%";
       document.querySelector(".grid").style.transform = "translateY(0%)";
     }, 150);

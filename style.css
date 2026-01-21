@@ -72,8 +72,9 @@ body::after {
   background-position: center center;
   background-size: cover;
 
-  filter: blur(0px);
+  filter: blur(var(--blur-amount, 2px));
   transform: scale(1.00); /* prevents edge clipping */
+  transition: all 1s ease;
 
   z-index: -1;
 }
