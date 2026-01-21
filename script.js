@@ -13,7 +13,7 @@ function drawRateChart(rates) {
 
   const cx = canvas.width / 2; // 30
   const cy = canvas.height / 2; // 30
-  const radius = 26;            // ⬅️ was ~70
+  const radius = 24;            // ⬅️ was ~70
 
   let startAngle = -Math.PI / 2;
 
@@ -35,7 +35,7 @@ function drawRateChart(rates) {
   ctx.save();
   ctx.globalCompositeOperation = "destination-out";
   ctx.beginPath();
-  ctx.arc(cx, cy, 20, 0, Math.PI * 2);
+  ctx.arc(cx, cy, 19, 0, Math.PI * 2);
   ctx.fill();
   ctx.restore();
 }

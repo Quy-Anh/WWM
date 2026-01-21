@@ -21,7 +21,7 @@ body {
 
 .page {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1250px;
   padding: 20px;
 }
 
@@ -92,7 +92,7 @@ h1 {
   display: block;
   grid-template-columns: repeat(1fr, minmax(220px, 1fr));
   gap: 12px;
-  width: 550px;
+  width: 500px;
 }
 
 section {
@@ -104,7 +104,7 @@ section h2 {
   font-weight: 400;
   color: #cccccc;
   padding: 8px 16px;
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .total {
@@ -116,7 +116,7 @@ label {
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 400;
   color: #cccccc;
   padding: 0px 16px;
@@ -130,7 +130,7 @@ input {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 400;
 }
 
@@ -173,12 +173,12 @@ span {
 .dmgHitTitle {
   margin-bottom: 0;
   padding-bottom: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #dmgHitEl {
   color: #fff;
-  font-size: 40px;
+  font-size: 36px;
   margin-top: -10px;
   padding-top: 0;
   padding-bottom: 0;
@@ -190,7 +190,7 @@ span {
 }
 
 #masteryIcon {
-  height: 60px;
+  height: 55px;
 }
 
 .rateChartBox {
