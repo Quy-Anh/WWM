@@ -135,6 +135,3 @@ function handleMobileChange(e) {
 
 // Run once on load
 handleMobileChange(mobileQuery);
-
-// Listen for changes (rotate, resize, iOS toolbar changes)
-mobileQuery.addEventListener("change", handleMobileChange);
