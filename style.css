@@ -234,3 +234,22 @@ span {
 .swatch.white  { background: #ffffff; }
 .swatch.yellow { background: #f5c542; }
 .swatch.orange { background: #e48a2a; }
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .grid {
+    width: 100% !important;
+  }
+
+  body::before {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  section h2, input, label {
+    font-size: 18px;
+  }
+}
