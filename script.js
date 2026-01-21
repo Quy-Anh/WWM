@@ -129,6 +129,9 @@ const mobileQuery = window.matchMedia("(max-width: 768px)");
 
 function handleMobileChange(e) {
   if (e.matches) {
+    setTimeout(() => {
+      document.querySelector("body").style.opacity = "100%";
+    }, 50);
     document.querySelector(".content").innerHTML = "<p style='text-align: center'>Mobile function not yet implemented.<br>Use desktop instead.</p>";
   } else {
     setTimeout(() => {
