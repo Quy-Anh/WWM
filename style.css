@@ -245,11 +245,16 @@ span {
     width: 100%;
   }
 
+  body::before,
+  body::after {
+    position: absolute;
+  }
+
   body::before {
     background: rgba(0, 0, 0, 0.75);
   }
 
   section h2, input, label {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 }
