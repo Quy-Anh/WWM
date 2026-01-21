@@ -83,7 +83,7 @@ function calculate() {
     affinityRate * maxAtk * affinityMul +
     abrasionRate * minAtk;
 
-  dmgHitEl.innerHTML = `~${expected.toFixed(2)}`;
+  dmgHitEl.innerHTML = `${expected.toFixed(2)}`;
   
     drawRateChart([
         { value: abrasionRate, color: "#a5a5a5" },
