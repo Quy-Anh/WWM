@@ -245,6 +245,14 @@ span {
     width: 100%;
   }
 
+  .totalContent {
+    margin-top: 30px;
+  }
+
+  body {
+    align-items:baseline;
+  }
+
   body::before,
   body::after {
     position: absolute;
@@ -255,6 +263,6 @@ span {
   }
 
   section h2, input, label {
-    font-size: 18px !important;
+    font-size: 18px;
   }
 }
